@@ -34,7 +34,8 @@ public class PrivacyCase extends EthicsCase{
      * 
      * @return 
      */
+    @Override
     public String toString() {
-        return dataType;
+        return super.toString() + " " + dataType;
     }
 }
