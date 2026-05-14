@@ -7,6 +7,35 @@
  *
  * @author 348337643
  */
-public class PrivacyCase {
+public class PrivacyCase extends EthicsCase{
+    private String dataType;
     
+    /**
+     * 
+     * @param caseTitle
+     * @param description
+     * @param dataType 
+     */
+    public PrivacyCase(String caseTitle, String description, String dataType) {
+        super(caseTitle, description, "Privacy Case");
+        this.dataType = dataType;
+        
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getDataType() {
+        return dataType;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public String toString() {
+        return super.toString() + " " + dataType;
+    }
 }

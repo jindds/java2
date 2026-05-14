@@ -8,5 +8,52 @@
  * @author 348337643
  */
 public class EthicsCase {
+    private String caseTitle;
+    private String description;
+    private String category;
+    public Verdict verdict;
     
+    /**
+     * 
+     * @param caseTitle
+     * @param description
+     * @param category 
+     */
+    public EthicsCase(String caseTitle, String description, String category) {
+        this.caseTitle = caseTitle;
+        this.description = description;
+        this.category = category;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getCaseTitle() {
+        return caseTitle;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getCaseDescription() {
+        return description;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getCategory() {
+        return category;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String toString() {
+        return caseTitle + " " + description + " " + category + " " + verdict;
+    }
 }
