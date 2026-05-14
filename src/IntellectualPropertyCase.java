@@ -10,13 +10,13 @@
 public class IntellectualPropertyCase extends EthicsCase{
     private String ipType;
     public IntellectualPropertyCase(String caseTitle, String description, String ipType){
-        super(caseTitle,description, "Intellectual Property Case")
+        super(caseTitle,description, "Intellectual Property Case");
         this.ipType = ipType;
 }
 public String getIptype(){
-    return this.ipType;
+    return ipType;
 }
-     @Override
+    @Override
     public String toString(){
     return super.toString() + " " + this.ipType; 
 }

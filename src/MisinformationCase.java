@@ -10,11 +10,11 @@
 public class MisinformationCase extends EthicsCase{
     private String mediaType;
     public MisinformationCase(String caseTitle, String description, String mediaType){
-        super(caseTitle, description, "Misinformation Case")
+        super(caseTitle, description, "Misinformation Case");
         this.mediaType = mediaType;
     }
     public String getMediatype(){
-        return this.mediaType;
+        return mediaType;
     }
     @Override
     public String toString(){
