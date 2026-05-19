@@ -37,6 +37,7 @@ public class Case1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -50,7 +51,13 @@ public class Case1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Unethical");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Reason:");
 
@@ -66,6 +73,7 @@ public class Case1 extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Ethical");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,9 +141,24 @@ public class Case1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //Main_Frame.cases[0].verdict.setCaseTitle(Main_Frame.cases[0].getCaseTitle());
+        
+        if (jRadioButton1.isSelected()) {
+            Main_Frame.cases[0].verdict.setStudentVerdict("Ethical");
+        } else {
+            Main_Frame.cases[0].verdict.setStudentVerdict("Unethical");
+        }
+
+        Main_Frame.cases[0].verdict.setReason(jTextArea2.getText());
+        
+        
         new Case2().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,6 +197,7 @@ public class Case1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
