@@ -1,6 +1,3 @@
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowAdapter;
-
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -19,33 +16,33 @@ public class Main_Frame extends javax.swing.JFrame {
      */
     public Main_Frame() {
         initComponents();
-            addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowActivated(WindowEvent e) {
-            
-cases[0] = new PrivacyCase(
-"The Always-On Microphone", 
-"audio recodings", 
-"A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings."
-);
-cases[1] = new AlgorithmCase(
-"The Biased Hiring Bot",
-"Gender Bias",
-"A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants"
-);
-cases[2] = new MisinformationCase(
-"The Deepfake Politician",
-"deepfake video",
-"A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake."
-);
-cases[3] = new IntellectualPropertyCase(
-"AI Trained on Artist Work",
-"AI-generated art",
-"An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment."
-);
-                
-            }
-        });
+        cases[0] = new PrivacyCase(
+            "The Always-On Microphone", 
+            "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.",
+            "audio recodings"
+        );
+        cases[1] = new AlgorithmCase(
+            "The Biased Hiring Bot",
+            "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants",
+            "Gender Bias"
+        );
+        cases[2] = new MisinformationCase(
+            "The Deepfake Politician",
+            "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.",
+            "deepfake video"
+        );
+        cases[3] = new IntellectualPropertyCase(
+            "AI Trained on Artist Work",
+            "An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.",
+            "AI-generated art"
+        );
+
+        // TODO
+        cases[4]=new PrivacyCase("d ", "e ", "f ");
+        cases[5]=new AlgorithmCase(" ", " ", " ");
+        cases[6]=new MisinformationCase(" ", " ", " ");
+        cases[7]=new IntellectualPropertyCase(" ", " ", " ");
+
     }
 
     /**
@@ -58,6 +55,7 @@ cases[3] = new IntellectualPropertyCase(
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +66,8 @@ cases[3] = new IntellectualPropertyCase(
             }
         });
 
+        jLabel1.setText("Main Frame");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -76,11 +76,17 @@ cases[3] = new IntellectualPropertyCase(
                 .addContainerGap(296, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(32, 32, 32))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(172, 172, 172)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(234, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
@@ -89,7 +95,7 @@ cases[3] = new IntellectualPropertyCase(
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Frame1().setVisible(true);
+        new Case1().setVisible(true);
         this.setVisible(false);         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -130,5 +136,6 @@ cases[3] = new IntellectualPropertyCase(
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
