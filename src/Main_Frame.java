@@ -1,3 +1,6 @@
+import java.io.File;
+import java.util.Scanner;
+import java.io.IOException;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -16,44 +19,20 @@ public class Main_Frame extends javax.swing.JFrame {
      */
     public Main_Frame() {
         initComponents();
-        cases[0] = new PrivacyCase(
-            "The Always-On Microphone", 
-            "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.",
-            "audio recodings"
-        );
-        cases[1] = new AlgorithmCase(
-            "The Biased Hiring Bot",
-            "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants",
-            "Gender Bias"
-        );
-        cases[2] = new MisinformationCase(
-            "The Deepfake Politician",
-            "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.",
-            "deepfake video"
-        );
-        cases[3] = new IntellectualPropertyCase(
-            "AI Trained on Artist Work",
-            "An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.",
-            "AI-generated art"
-        );
-
-        cases[4]=new PrivacyCase(
-                "The cookie problem ", 
-                "A company stores your information to track your habits and your preferred things.", 
-                "software cookiess");
-        cases[5]=new AlgorithmCase(
-                "Higher Security ",
-                "An machine learning algorithm built by the police checks for areas of high criminal rates and deploys more officers there ", 
-                "Statistics vs Humanity");
-        cases[6]=new MisinformationCase(
-                "Propoganda out in the wild ", 
-                "A random reddit user posts an AI generated video causing them to get a 1 month ban and making them ineligible to earn cash for 3 months", 
-                "AI propoganda");
-        cases[7]=new IntellectualPropertyCase(
-                "Subscriptions for everything ", 
-                "Apple chooses that tmr you must pay them 5 dollars a month to get access to the security updates that are going to come out", 
-                "Subcriptions");
-
+        int i = 0;
+        
+        try {
+            Scanner fileInput = new Scanner(new File("File.txt"));
+            while (fileInput.hasNext()) {
+                String output = fileInput.nextLine();
+                String [] info = output.split(",");
+                //cases[i]
+                i++;
+            }
+            fileInput.close();
+        } catch (IOException e) {
+            System.out.println("Java Exception: " + e);
+        }
     }
 
     /**
