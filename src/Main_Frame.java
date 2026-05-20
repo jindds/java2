@@ -38,10 +38,22 @@ public class Main_Frame extends javax.swing.JFrame {
         );
 
         // TODO
-        cases[4]=new PrivacyCase("d ", "e ", "f ");
-        cases[5]=new AlgorithmCase(" ", " ", " ");
-        cases[6]=new MisinformationCase(" ", " ", " ");
-        cases[7]=new IntellectualPropertyCase(" ", " ", " ");
+        cases[4]=new PrivacyCase(
+                "The cookie problem ", 
+                "A company stores your information to track your habits and your preferred things.", 
+                "software cookiess");
+        cases[5]=new AlgorithmCase(
+                "Higher Security ",
+                "An machine learning algorithm built by the police checks for areas of high criminal rates and deploys more officers there ", 
+                "Statistics vs Humanity");
+        cases[6]=new MisinformationCase(
+                "Propoganda out in the wild ", 
+                "A random reddit user posts an AI generated video causing them to get a 1 month ban and making them ineligible to earn cash for 3 months", 
+                "AI propoganda");
+        cases[7]=new IntellectualPropertyCase(
+                "Subscriptions for everything ", 
+                "Apple chooses that tmr you must pay them 5 dollars a month to get access to the security updates that are going to come out", 
+                "Subcriptions");
 
     }
 
