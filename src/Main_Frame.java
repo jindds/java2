@@ -37,7 +37,6 @@ public class Main_Frame extends javax.swing.JFrame {
             "AI-generated art"
         );
 
-        // TODO
         cases[4]=new PrivacyCase(
                 "The cookie problem ", 
                 "A company stores your information to track your habits and your preferred things.", 

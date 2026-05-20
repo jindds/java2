@@ -64,10 +64,12 @@ public class Case1 extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         jTextArea2.setColumns(20);
+        jTextArea2.setLineWrap(true);
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -141,11 +143,11 @@ public class Case1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //Main_Frame.cases[0].verdict.setCaseTitle(Main_Frame.cases[0].getCaseTitle());
+        Main_Frame.cases[0].verdict.setCaseTitle(Main_Frame.cases[0].getCaseTitle());
         
         if (jRadioButton1.isSelected()) {
             Main_Frame.cases[0].verdict.setStudentVerdict("Ethical");
-        } else {
+        } else if (jRadioButton2.isSelected()) {
             Main_Frame.cases[0].verdict.setStudentVerdict("Unethical");
         }
 
