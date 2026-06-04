@@ -1,0 +1,8 @@
+The Always-On Microphone,Ethical,
+The Biased Hiring Bot,Unethical,
+The Deepfake Politician,,
+AI Trained on Artist Work,,
+The cookie problem,,
+Higher Security,,
+Propoganda out in the wild,,
+Subscriptions for everything,Unethical,

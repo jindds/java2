@@ -19,19 +19,34 @@ public class Main_Frame extends javax.swing.JFrame {
      */
     public Main_Frame() {
         initComponents();
-        int i = 0;
         
         try {
             Scanner fileInput = new Scanner(new File("File.txt"));
+            int i = 0;
             while (fileInput.hasNext()) {
                 String output = fileInput.nextLine();
                 String [] info = output.split(",");
-                //cases[i]
-                i++;
-            }
+
+                String title = info[0].trim();
+                String description = info[1].trim();
+                String category = info[2].trim();
+                String type = info[3].trim();
+                    
+                    if (type.equals("PrivacyCase")) { // check which case type it is
+                        cases[i] = new PrivacyCase(title, description, category); // then create case in cases array
+                    } else if (type.equals("AlgorithmCase")) {
+                        cases[i] = new AlgorithmCase(title, description, category);
+                    } else if (type.equals("MisinformationCase")) {
+                        cases[i] = new MisinformationCase(title, description, category);
+                    } else if (type.equals("IntellectualPropertyCase")) {
+                        cases[i] = new IntellectualPropertyCase(title, description, category);
+                    }
+
+                    i++;
+                }
             fileInput.close();
-        } catch (IOException e) {
-            System.out.println("Java Exception: " + e);
+            } catch (IOException e) {
+                System.out.println("Java Exception: " + e);
         }
     }
 

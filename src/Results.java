@@ -2,6 +2,11 @@
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.FileWriter;
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -25,6 +30,13 @@ public class Results extends javax.swing.JFrame {
                 int ethical = 0;
                 int unethical = 0;
                 
+                try { // clear verdict text file to prepare for new verdict info
+                    FileWriter fw = new FileWriter("src/VerdictDatabase.txt", false);
+                } catch (IOException ioException) {
+                    System.err.println("Java Exception: " + ioException);
+                }
+
+                
                 //add code here
                 for (EthicsCase x : Main_Frame.cases) {
                     if (x.verdict.getStudentVerdict().equals("Ethical")) {
@@ -32,7 +44,17 @@ public class Results extends javax.swing.JFrame {
                     } else if(x.verdict.getStudentVerdict().equals("Unethical")) {
                         unethical++;
                     }
+                    try { // write each verdict info into text file
+                        FileWriter w = new FileWriter("VerdictDatabase.txt", true);
+                        PrintWriter output = new PrintWriter(w);
+                        output.println(x.verdict.getCaseTitle() + "," + x.verdict.getStudentVerdict() + "," + x.verdict.getReason());
+                        output.close();
+                    } catch (IOException ioException) {
+                        System.err.println("Java Exception: " + ioException);
+                    }
+
                 }
+                                
                 jLabel2.setText(ethical+"");
                 jLabel3.setText(unethical+"");
                 
