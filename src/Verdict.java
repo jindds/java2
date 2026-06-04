@@ -11,10 +11,7 @@ public class Verdict {
     private String caseTitle;
     private String studentVerdict;
     private String reason;
-    
-    /**
-     * 
-     */
+
     public Verdict() {
         caseTitle = "";
         studentVerdict = "";
@@ -23,9 +20,9 @@ public class Verdict {
     
     /**
      * 
-     * @param caseTitle
-     * @param verdict
-     * @param reason 
+     * @param caseTitle title of case
+     * @param verdict verdict of case
+     * @param reason reason of verdict
      */
     public Verdict(String caseTitle, String verdict, String reason) {
         this.caseTitle = caseTitle;
@@ -35,7 +32,7 @@ public class Verdict {
     
     /**
      * 
-     * @param title 
+     * @param title of case
      */
     public void setCaseTitle(String title) {
         caseTitle = title;
@@ -43,7 +40,7 @@ public class Verdict {
     
     /**
      * 
-     * @return 
+     * @return string case of title
      */
     public String getCaseTitle() {
         return caseTitle;
@@ -51,7 +48,7 @@ public class Verdict {
     
     /**
      * 
-     * @param reason 
+     * @param reason of verdict
      */
     public void setReason(String reason) {
         this.reason = reason;
@@ -59,7 +56,7 @@ public class Verdict {
     
     /**
      * 
-     * @return 
+     * @return string reason of verdict
      */
     public String getReason() {
         return reason;
@@ -67,7 +64,7 @@ public class Verdict {
     
     /**
      * 
-     * @param verdict 
+     * @param verdict of case
      */
     public void setStudentVerdict(String verdict) {
         studentVerdict = verdict;
@@ -75,7 +72,7 @@ public class Verdict {
     
     /**
      * 
-     * @return 
+     * @return string student verdict
      */
     public String getStudentVerdict() {
         return studentVerdict;
@@ -83,7 +80,7 @@ public class Verdict {
     
     /**
      * 
-     * @return 
+     * @return string sentence
      */
     public String toString() {
         return caseTitle + " " + studentVerdict + " " + reason;

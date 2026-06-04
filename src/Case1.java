@@ -143,20 +143,31 @@ public class Case1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Main_Frame.cases[0].verdict.setCaseTitle(Main_Frame.cases[0].getCaseTitle());
-        
+// Copy the title of the current case into the verdict object
+        Main_Frame.cases[0].verdict.setCaseTitle(
+                Main_Frame.cases[0].getCaseTitle()
+        );
+
+// Check which radio button the user selected
         if (jRadioButton1.isSelected()) {
+
+            // User selected "Ethical"
             Main_Frame.cases[0].verdict.setStudentVerdict("Ethical");
+
         } else if (jRadioButton2.isSelected()) {
+
+            // User selected "Unethical"
             Main_Frame.cases[0].verdict.setStudentVerdict("Unethical");
         }
 
+// Store the user's explanation/reason from the text area
         Main_Frame.cases[0].verdict.setReason(jTextArea2.getText());
-        
-        
+
+// Open the next case screen
         new Case2().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+// Hide the current window
+        this.setVisible(false);    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:

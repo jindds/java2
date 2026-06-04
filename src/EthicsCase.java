@@ -12,23 +12,26 @@ public class EthicsCase {
     private String description;
     private String category;
     public Verdict verdict;
+    private static int count = 0;
+    public static final int MAX_CASES = 8;
     
     /**
      * 
-     * @param caseTitle
-     * @param description
-     * @param category 
+     * @param caseTitle title of case
+     * @param description description of case
+     * @param category category of case
      */
     public EthicsCase(String caseTitle, String description, String category) {
         this.caseTitle = caseTitle;
         this.description = description;
         this.category = category;
         this.verdict = new Verdict();
+        count++;
     }
     
     /**
      * 
-     * @return 
+     * @return string title of case
      */
     public String getCaseTitle() {
         return caseTitle;
@@ -36,7 +39,7 @@ public class EthicsCase {
     
     /**
      * 
-     * @return 
+     * @return string description of case
      */
     public String getCaseDescription() {
         return description;
@@ -44,7 +47,7 @@ public class EthicsCase {
     
     /**
      * 
-     * @return 
+     * @return string category of case
      */
     public String getCategory() {
         return category;
@@ -52,7 +55,15 @@ public class EthicsCase {
     
     /**
      * 
-     * @return 
+     * @return static int count
+     */
+    public static int getCountCases() {
+        return count;
+    }
+    
+    /**
+     * 
+     * @return string sentence
      */
     public String toString() {
         return caseTitle + " " + description + " " + category + " " + verdict;

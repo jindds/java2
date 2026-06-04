@@ -12,9 +12,9 @@ public class PrivacyCase extends EthicsCase{
     
     /**
      * 
-     * @param caseTitle
-     * @param description
-     * @param dataType 
+     * @param caseTitle title of case
+     * @param description description of case
+     * @param dataType data of case
      */
     public PrivacyCase(String caseTitle, String description, String dataType) {
         super(caseTitle, description, "Privacy Case");
@@ -24,7 +24,7 @@ public class PrivacyCase extends EthicsCase{
     
     /**
      * 
-     * @return 
+     * @return string datatype
      */
     public String getDataType() {
         return dataType;
@@ -32,7 +32,7 @@ public class PrivacyCase extends EthicsCase{
     
     /**
      * 
-     * @return 
+     * @return string sentence
      */
     @Override
     public String toString() {

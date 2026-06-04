@@ -137,14 +137,17 @@ public class Case6 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Copy the title of the current case into the verdict object
         Main_Frame.cases[5].verdict.setCaseTitle(Main_Frame.cases[5].getCaseTitle());
         
+        // Check which radio button the user selected
         if (jRadioButton1.isSelected()) {
             Main_Frame.cases[5].verdict.setStudentVerdict("Ethical");
         } else if (jRadioButton2.isSelected()) {
             Main_Frame.cases[5].verdict.setStudentVerdict("Unethical");
         }
 
+        // Store the user's explanation/reason from the text area
         Main_Frame.cases[5].verdict.setReason(jTextArea2.getText());
 
         
