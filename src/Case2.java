@@ -18,14 +18,16 @@ public class Case2 extends javax.swing.JFrame {
      */
     public Case2() {
         initComponents();
+        EthicsCase.advanceCase(); // NEW: increment counter when window opens
             
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowActivated(WindowEvent e) {
-                //add code here
-                jLabel1.setText("Scenario #2: " + Main_Frame.cases[1].getCaseTitle());
-                jLabel2.setText("Category: " + Main_Frame.cases[1].getCategory());
-                jTextArea1.setText(Main_Frame.cases[1].getCaseDescription());
+        jLabel1.setText("Case " + EthicsCase.getCurrentCase() + " of " +
+                         EthicsCase.MAX_CASES + ": " +
+                         Main_Frame.cases[1].getCaseTitle());
+        jLabel2.setText("Category: " + Main_Frame.cases[1].getCategory());
+        jTextArea1.setText(Main_Frame.cases[1].getCaseDescription());
             }
         });
 
@@ -141,7 +143,29 @@ public class Case2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       // Copy the title of the current case into the verdict object
+        // --- NEW: Validate input before proceeding ---
+        if (!jRadioButton1.isSelected() && !jRadioButton2.isSelected()) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Please select Ethical or Unethical before continuing.",
+                    "Missing Verdict",
+                    javax.swing.JOptionPane.WARNING_MESSAGE
+            );
+            return; // stops the method — does NOT open next case
+        }
+
+        if (jTextArea2.getText().trim().isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(
+                    this,
+                    "Please write a reason for your verdict.",
+                    "Missing Reason",
+                    javax.swing.JOptionPane.WARNING_MESSAGE
+            );
+            return;
+        }
+        // --- END NEW ---
+
+        // Copy the title of the current case into the verdict object
         Main_Frame.cases[1].verdict.setCaseTitle(Main_Frame.cases[1].getCaseTitle());
         
         // Check which radio button the user selected

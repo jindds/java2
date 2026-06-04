@@ -13,6 +13,7 @@ public class EthicsCase {
     private String category;
     public Verdict verdict;
     private static int count = 0;
+    private static int currentCase = 0; // tracks which case the user is on
     public static final int MAX_CASES = 8;
     
     /**
@@ -59,6 +60,14 @@ public class EthicsCase {
      */
     public static int getCountCases() {
         return count;
+    }
+    
+    public static int getCurrentCase() {
+        return currentCase;
+    }
+
+    public static void advanceCase() {
+        currentCase++;
     }
     
     /**

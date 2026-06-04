@@ -6,3 +6,67 @@ The cookie problem,,
 Higher Security,,
 Propoganda out in the wild,,
 Subscriptions for everything,Unethical,
+The Always-On Microphone,Unethical,df
+The Biased Hiring Bot,Unethical,df
+The Deepfake Politician,Unethical,df
+AI Trained on Artist Work,Unethical,df
+The cookie problem,Ethical,df
+Higher Security,Ethical,df
+Propoganda out in the wild,Ethical,dfa
+Subscriptions for everything,Ethical,adf
+The Always-On Microphone,Ethical,asdf
+The Biased Hiring Bot,Unethical,asdf
+The Deepfake Politician,Unethical,asdf
+AI Trained on Artist Work,Ethical,asd
+The cookie problem,Ethical,asdf
+Higher Security,Unethical,asdf
+Propoganda out in the wild,Ethical,asdf
+Subscriptions for everything,Ethical,asdf
+The Always-On Microphone,Ethical,asdf
+The Biased Hiring Bot,Unethical,asdf
+The Deepfake Politician,Unethical,asdf
+AI Trained on Artist Work,Ethical,asd
+The cookie problem,Ethical,asdf
+Higher Security,Unethical,asdf
+Propoganda out in the wild,Ethical,asdf
+Subscriptions for everything,Ethical,asdf
+The Always-On Microphone,Ethical,asdf
+The Biased Hiring Bot,Unethical,asdf
+The Deepfake Politician,Unethical,asdf
+AI Trained on Artist Work,Ethical,asd
+The cookie problem,Ethical,asdf
+Higher Security,Unethical,asdf
+Propoganda out in the wild,Ethical,asdf
+Subscriptions for everything,Ethical,asdf
+The Always-On Microphone,Unethical,sdfg
+The Biased Hiring Bot,Unethical,sdfg
+The Deepfake Politician,Unethical,sdfg
+AI Trained on Artist Work,Unethical,sdfg
+The cookie problem,Unethical,sdfg
+Higher Security,Unethical,sdfg
+Propoganda out in the wild,Unethical,sdfg
+Subscriptions for everything,Unethical,sdfg
+The Always-On Microphone,Ethical,asdf
+The Biased Hiring Bot,Unethical,asdf
+The Deepfake Politician,Ethical,asdf
+AI Trained on Artist Work,Unethical,asdf
+The cookie problem,Ethical,asdf
+Higher Security,Unethical,asdf
+Propoganda out in the wild,Ethical,asdf
+Subscriptions for everything,Unethical,asdf
+The Always-On Microphone,Unethical,1234
+The Biased Hiring Bot,Ethical,asdf
+The Deepfake Politician,Unethical,asdf
+AI Trained on Artist Work,Unethical,asdf
+The cookie problem,Ethical,asdf
+Higher Security,Unethical,asdf
+Propoganda out in the wild,Unethical,asdf
+Subscriptions for everything,Ethical,asdf
+The Always-On Microphone,Unethical,1234
+The Biased Hiring Bot,Ethical,asdf
+The Deepfake Politician,Unethical,asdf
+AI Trained on Artist Work,Unethical,asdf
+The cookie problem,Ethical,asdf
+Higher Security,Unethical,asdf
+Propoganda out in the wild,Unethical,asdf
+Subscriptions for everything,Ethical,asdf

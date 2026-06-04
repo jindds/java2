@@ -58,6 +58,25 @@ public class Results extends javax.swing.JFrame {
                 jLabel2.setText(ethical+"");
                 jLabel3.setText(unethical+"");
                 
+                // --- NEW: Build category breakdown string ---
+                int privacyU = countUnethicalByType(PrivacyCase.class);
+                int algoU = countUnethicalByType(AlgorithmCase.class);
+                int misinfoU = countUnethicalByType(MisinformationCase.class);
+                int ipU = countUnethicalByType(IntellectualPropertyCase.class);
+
+                String breakdown = String.format(
+                        "Category breakdown (Unethical votes):%n"
+                        + "  Privacy:               %d / 2%n"
+                        + "  Algorithm Bias:        %d / 2%n"
+                        + "  Misinformation:        %d / 2%n"
+                        + "  Intellectual Property: %d / 2",
+                        privacyU, algoU, misinfoU, ipU
+                );
+
+                // Append breakdown to the profile text that's already set
+                jTextArea1.setText(jTextArea1.getText() + "\n\n" + breakdown);
+                // --- END NEW ---
+                
                 if (unethical <= 2) {
                     jTextArea1.setText("""
                                        Your profile: The Tech Optimist 
@@ -212,4 +231,22 @@ public class Results extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Counts how many cases in a given category were marked Unethical. Uses
+     * instanceof to check the runtime type of each EthicsCase object.
+     *
+     * @param categoryClass the subclass to check (e.g. PrivacyCase.class)
+     * @return number of Unethical verdicts in that category
+     */
+    private int countUnethicalByType(Class<?> categoryClass) {
+        int count = 0;
+        for (EthicsCase c : Main_Frame.cases) {
+            if (categoryClass.isInstance(c)
+                    && c.verdict.getStudentVerdict().equals("Unethical")) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
